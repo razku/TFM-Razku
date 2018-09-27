@@ -43,6 +43,14 @@ public class GameManager : MonoBehaviour
         {
             m_Tanks[i].m_Instance =
                 Instantiate(m_TankPrefab, m_Tanks[i].m_SpawnPoint.position, m_Tanks[i].m_SpawnPoint.rotation) as GameObject;
+            if(i == 0)
+            {
+                m_Tanks[i].m_Instance.tag = "Player";
+            }
+            else
+            {
+                m_Tanks[i].m_Instance.tag = "Enemy";
+            }
             m_Tanks[i].m_PlayerNumber = i + 1;
             m_Tanks[i].Setup();
         }
