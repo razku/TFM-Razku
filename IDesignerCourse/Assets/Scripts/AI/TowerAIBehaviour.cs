@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TowerAIBehaviour : MonoBehaviour {
     //Target of the turret. By default, it will be the player
-    GameObject target;
+    private GameObject target;
 
     //Radius where the turret is able to attack the player
     public float radius = 15.0f;

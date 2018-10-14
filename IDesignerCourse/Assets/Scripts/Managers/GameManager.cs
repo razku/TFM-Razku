@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour
 {
@@ -50,6 +51,10 @@ public class GameManager : MonoBehaviour
             else
             {
                 m_Tanks[i].m_Instance.tag = "Enemy";
+                m_Tanks[i].m_Instance.AddComponent<NavMeshAgent>();
+                m_Tanks[i].m_Instance.GetComponent<NavMeshAgent>().baseOffset = 0f;
+                m_Tanks[i].m_Instance.GetComponent<NavMeshAgent>().speed = 6f;
+                m_Tanks[i].m_Instance.AddComponent<TankAIBehaviour>();
             }
             m_Tanks[i].m_PlayerNumber = i + 1;
             m_Tanks[i].Setup();
