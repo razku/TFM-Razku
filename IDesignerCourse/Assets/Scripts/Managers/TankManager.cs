@@ -55,6 +55,12 @@ public class TankManager
         m_Instance.transform.position = m_SpawnPoint.position;
         m_Instance.transform.rotation = m_SpawnPoint.rotation;
 
+        TankAIBehaviour ai = m_Instance.GetComponent<TankAIBehaviour>();
+        if(ai != null)
+        {
+            ai.Reset();
+        }
+
         m_Instance.SetActive(false);
         m_Instance.SetActive(true);
     }

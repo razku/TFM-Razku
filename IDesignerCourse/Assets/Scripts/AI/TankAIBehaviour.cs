@@ -30,6 +30,8 @@ public class TankAIBehaviour : MonoBehaviour {
         shootScript = gameObject.GetComponent<TankShooting>();
 
         CurrentTimerShoot = TimerShoot;
+
+        InitialTimeout = 3f;
     }
 	
 	// Update is called once per frame
@@ -55,6 +57,11 @@ public class TankAIBehaviour : MonoBehaviour {
             target = GameObject.FindGameObjectWithTag("Player");
         }
 	}
+
+    public void Reset()
+    {
+        InitialTimeout = 3f;
+    }
 
     private void CalculateDistance()
     {
