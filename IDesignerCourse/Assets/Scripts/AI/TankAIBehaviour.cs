@@ -29,6 +29,9 @@ public class TankAIBehaviour : MonoBehaviour {
         agentComponent = gameObject.GetComponent<NavMeshAgent>();
         shootScript = gameObject.GetComponent<TankShooting>();
 
+        gameObject.GetComponent<TankMovement>().enabled = false;
+        gameObject.GetComponent<TankShooting>().enabled = false;
+
         CurrentTimerShoot = TimerShoot;
 
         InitialTimeout = 3f;
@@ -36,6 +39,8 @@ public class TankAIBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        gameObject.GetComponent<TankMovement>().enabled = false;
+        gameObject.GetComponent<TankShooting>().enabled = false;
         CurrentTimerShoot -= Time.deltaTime;
         InitialTimeout -= Time.deltaTime;
 		if(target != null)
@@ -61,6 +66,9 @@ public class TankAIBehaviour : MonoBehaviour {
     public void Reset()
     {
         InitialTimeout = 3f;
+
+        gameObject.GetComponent<TankMovement>().enabled = false;
+        gameObject.GetComponent<TankShooting>().enabled = false;
     }
 
     private void CalculateDistance()

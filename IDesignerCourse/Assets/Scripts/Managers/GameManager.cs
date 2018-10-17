@@ -55,6 +55,8 @@ public class GameManager : MonoBehaviour
                 m_Tanks[i].m_Instance.GetComponent<NavMeshAgent>().baseOffset = 0f;
                 m_Tanks[i].m_Instance.GetComponent<NavMeshAgent>().speed = 6f;
                 m_Tanks[i].m_Instance.AddComponent<TankAIBehaviour>();
+                m_Tanks[i].m_Instance.GetComponent<TankMovement>().enabled = false;
+                m_Tanks[i].m_Instance.GetComponent<TankShooting>().enabled = false;
             }
             m_Tanks[i].m_PlayerNumber = i + 1;
             m_Tanks[i].Setup();

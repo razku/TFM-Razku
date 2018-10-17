@@ -41,9 +41,9 @@ public class TowerAIBehaviour : MonoBehaviour {
                 Fire();
                 ReloadingTime = FireCadency;
             }
-
-            Debug.Log(gameObject.transform.forward);
+            
             gameObject.transform.LookAt(target.transform);
+            
         }
         else
         {

@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 471}
   m_MaxSize: {x: 18006, y: 14021}
   vertical: 0
-  controlID: 33
+  controlID: 32
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 471}
   m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 55
+  controlID: 33
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -345,9 +345,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -12.459469, y: 6.62301, z: 11.220237}
+    m_Target: {x: 4.6167774, y: 3.7582178, z: 6.4481454}
     speed: 2
-    m_Value: {x: -12.459469, y: 6.62301, z: 11.220237}
+    m_Value: {x: 4.6167774, y: 3.7582178, z: 6.4481454}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -370,13 +370,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.3790909, y: -0.0019302658, z: 0.0007932795, w: -0.92535704}
+    m_Target: {x: 0.03184711, y: 0.7103878, z: -0.032214563, w: 0.70235115}
     speed: 2
-    m_Value: {x: -0.37909093, y: -0.0019302659, z: 0.00079327956, w: -0.9253571}
+    m_Value: {x: 0.03184711, y: 0.7103878, z: -0.032214563, w: 0.70235115}
   m_Size:
-    m_Target: 59.47139
+    m_Target: 7.410985
     speed: 2
-    m_Value: 59.47139
+    m_Value: 7.410985
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -414,10 +414,10 @@ MonoBehaviour:
     width: 291
     height: 397
   m_TreeViewState:
-    scrollPos: {x: 0, y: 2260}
-    m_SelectedIDs: 8e03feff
-    m_LastClickedID: -130162
-    m_ExpandedIDs: c0fbffff000000004e2b00009a2c0000c42c0000c82c00006e2d0000
+    scrollPos: {x: 0, y: 116}
+    m_SelectedIDs: 182e0000
+    m_LastClickedID: 11800
+    m_ExpandedIDs: 1afcffff000000002a2b00004e2b0000742d0000c02d000090300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -478,19 +478,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Estudios\TFM-Razku\IDesignerCourse
+  m_LastProjectPath: C:\Users\Adrian\Documents\GitHub\TFM-Razku\IDesignerCourse
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1e270000
-    m_LastClickedID: 10014
-    m_ExpandedIDs: 000000001e270000c4270000622a0000663100006831000000ca9a3bffffff7f
+    m_SelectedIDs: 7a280000
+    m_LastClickedID: 10362
+    m_ExpandedIDs: 00000000e42600008a270000342a00002c3200002e32000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -518,7 +518,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e270000c4270000622a00006631000068310000
+    m_ExpandedIDs: 00000000e42600008a270000342a00002c3200002e320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -545,7 +545,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
