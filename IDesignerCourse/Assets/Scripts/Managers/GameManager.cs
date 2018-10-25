@@ -12,8 +12,9 @@ public class GameManager : MonoBehaviour
     public CameraControl m_CameraControl;   
     public Text m_MessageText;              
     public GameObject m_TankPrefab;         
-    public TankManager[] m_Tanks;           
+    public TankManager[] m_Tanks;
 
+    public bool Multiplayer = true;
 
     private int m_RoundNumber;              
     private WaitForSeconds m_StartWait;     
@@ -50,13 +51,16 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                m_Tanks[i].m_Instance.tag = "Enemy";
-                m_Tanks[i].m_Instance.AddComponent<NavMeshAgent>();
-                m_Tanks[i].m_Instance.GetComponent<NavMeshAgent>().baseOffset = 0f;
-                m_Tanks[i].m_Instance.GetComponent<NavMeshAgent>().speed = 6f;
-                m_Tanks[i].m_Instance.AddComponent<TankAIBehaviour>();
-                m_Tanks[i].m_Instance.GetComponent<TankMovement>().enabled = false;
-                m_Tanks[i].m_Instance.GetComponent<TankShooting>().enabled = false;
+                if(Multiplayer)
+                {
+                    m_Tanks[i].m_Instance.tag = "Enemy";
+                    m_Tanks[i].m_Instance.AddComponent<NavMeshAgent>();
+                    m_Tanks[i].m_Instance.GetComponent<NavMeshAgent>().baseOffset = 0f;
+                    m_Tanks[i].m_Instance.GetComponent<NavMeshAgent>().speed = 6f;
+                    m_Tanks[i].m_Instance.AddComponent<TankAIBehaviour>();
+                    m_Tanks[i].m_Instance.GetComponent<TankMovement>().enabled = false;
+                    m_Tanks[i].m_Instance.GetComponent<TankShooting>().enabled = false;
+                }
             }
             m_Tanks[i].m_PlayerNumber = i + 1;
             m_Tanks[i].Setup();

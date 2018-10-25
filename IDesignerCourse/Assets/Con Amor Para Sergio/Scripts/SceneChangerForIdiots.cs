@@ -16,17 +16,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneChangerForIdiots : MonoBehaviour {
 
-  #region Variables
-  #endregion
   
-  #region SceneChangerForIdiotsMethods
 	public void ChangeScene(string scene)
 	{
 		SceneManager.LoadScene(scene);
 	}
-  #endregion
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
   
-  #region UnityMethods
 
 	void Start () {
 		
@@ -36,5 +36,4 @@ public class SceneChangerForIdiots : MonoBehaviour {
 		
 	}
   
-  #endregion
 }
