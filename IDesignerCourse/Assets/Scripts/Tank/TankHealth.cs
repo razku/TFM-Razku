@@ -65,4 +65,26 @@ public class TankHealth : MonoBehaviour
         
         gameObject.SetActive(false);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "LifeBarrel")
+        {
+            m_CurrentHealth += 40f;
+            if(m_CurrentHealth > m_StartingHealth)
+            {
+                m_CurrentHealth = m_StartingHealth;
+            }
+        }
+        if(other.gameObject.tag == "ExplosionBarrel")
+        {
+            m_CurrentHealth -= 40f;
+
+            if (m_CurrentHealth <= 0f && !m_Dead)
+            {
+                OnDeath();
+            }
+        }
+        Destroy(other.gameObject);
+    }
 }
