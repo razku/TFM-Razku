@@ -85,6 +85,7 @@ public class TankHealth : MonoBehaviour
                 OnDeath();
             }
         }
-        Destroy(other.gameObject);
+        other.gameObject.SetActive(false);
+        SetHealthUI();
     }
 }

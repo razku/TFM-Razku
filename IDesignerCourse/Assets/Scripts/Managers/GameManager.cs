@@ -20,7 +20,10 @@ public class GameManager : MonoBehaviour
     private WaitForSeconds m_StartWait;     
     private WaitForSeconds m_EndWait;       
     private TankManager m_RoundWinner;
-    private TankManager m_GameWinner;       
+    private TankManager m_GameWinner;
+
+    private GameObject[] ExplosionBarrels;
+    private GameObject[] LifeBarrels;
 
     private void Start()
     {
@@ -29,6 +32,9 @@ public class GameManager : MonoBehaviour
 
         SpawnAllTanks();
         SetCameraTargets();
+
+        ExplosionBarrels = GameObject.FindGameObjectsWithTag("ExplosionBarrel");
+        LifeBarrels = GameObject.FindGameObjectsWithTag("LifeBarrel");
 
         StartCoroutine(GameLoop());
     }
@@ -95,10 +101,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void ResetBarrels()
+    {
+        foreach(GameObject b in LifeBarrels)
+        {
+            b.SetActive(true);
+        }
+        foreach(GameObject b in ExplosionBarrels)
+        {
+            b.SetActive(true);
+        }
+    }
+
     private IEnumerator RoundStarting()
     {
         ResetAllTanks();
         DisableTankControl();
+        ResetBarrels();
 
         m_CameraControl.SetStartPositionAndSize();
 
